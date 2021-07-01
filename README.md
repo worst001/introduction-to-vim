@@ -2,24 +2,63 @@
 
 #### 介绍
 介绍了一些Vim的入门知识和相关生态
+尽量将一些Vim基础和常用的点介绍清楚
+适合入门的初学者学习
+有一定经验的开发者也可以从中开阔思路
+
 三人行必有我师
-相互学习相互提高
+愿大家相互学习相互提高
 
-#### 软件架构
-软件架构说明
+#### 目录结构
+```
+.
+├── .config
+│   ├── fzf
+│   └── ranger
+├── UltiSnips
+│   └── java.snippets
+├── ideavim
+│   └── .ideavimrc
+├── tmux
+│   ├── .tmux.conf
+│   └── .tmux.conf.local
+├── vim
+│   ├── .vimrc
+│   ├── 宏录制.html
+│   └── 通用语法.vim
+├── 幻灯片
+│   ├── Vim入门详解-open.key
+│   └── Vim入门详解-open.pptx
+└── 思维导图
+    ├── Vim入门.mindnode
+    └── Vim入门.xmind
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  .config
+    + Unix系统生态工具统一配置目录
+    + `用户根目录/.config`
+2.  UltiSnips
+    + 默认读取vim主目录
+    + `用户根目录/.vim/UltiSnips`
+3.  ideavim
+    + Unix或Windows都在用户根目录
+    + Unix
+        + `用户根目录/.ideavimrc`
+    + Windows
+        + `C:\Users\用户名\.ideavimrc`
+4.  tmux
+    + 两个配置文件都需要放在用户根目录
+    + `用户根目录/.tmux.conf`
+    + `用户根目录/.tmux.conf.local`
+5.  幻灯片
+    + Mac用户可以使用 `Vim入门详解-open.key`
+    + Windows用户可以使用 `Vim入门详解-open.pptx`
+6.  思维导图
+    + Mac用户可以使用 `Vim入门.mindnode`
+    + Windows用户可以使用 `Vim入门.xmind`
 
 #### 参与贡献
 
@@ -27,13 +66,3 @@
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

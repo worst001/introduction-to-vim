@@ -1,0 +1,23 @@
+global !p
+def list_params(params):
+	list = params.split(',')
+	link = ""
+	initial_indent = snip._initial_indent
+	for it in list:
+		it = "\n" + initial_indent + "* @param " + it.strip() + " <+Comment+>"
+		link = link + it
+	return "*" + link
+endglobal
+
+snippet ff "Java Easy func" b
+/**
+* `!p snip.rv = t[3][0].upper()  + t[3][1:]`
+* ${6:<+Description+>}
+`!p snip.rv = list_params(t[4])`
+*
+* @return ${5:<+Return+>}
+*/
+${1:public} ${2:void} ${3:funcname} (${4}) {
+	${7}
+}
+endsnippet

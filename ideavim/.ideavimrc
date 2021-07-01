@@ -1,0 +1,90 @@
+" ===============
+" 基础配置
+" ===============
+let mapleader=" "
+
+set clipboard+=unnamed
+set history=100000
+if has("clipboard")
+    vnoremap    <C-C>   "+y
+endif
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmode
+set number
+set relativenumber
+set scrolloff=3
+set clipboard=unnamed
+
+:nnoremap   <F2>    :edit ~/.ideavimrc<cr>
+
+" ===============
+" 模拟插件
+" ===============
+set easymotion
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+
+let g:argtextobj="[:],(:),<:>"
+
+" ===============
+" 按键绑定
+" ===============
+" UI 相关
+:nnoremap   <Leader>lh      :nohlsearch<cr>
+:nnoremap   <Leader>lw      :action EditorToggleUseSoftWraps<cr>
+:nnoremap   <Leader>lf      :action ToggleFullScreen<cr>
+" 基础按键
+:inoremap   jk              <esc>
+:noremap    Q               :wq<cr>
+:noremap    K               9k
+:noremap    J               9j
+:noremap    L               12l
+:noremap    H               12h
+:noremap    --              :action EditorJoinLines<cr>
+:nnoremap   <Leader>cl      :actionlist<cr>
+:nnoremap   <Leader>sx      :action IdeaVim.ReloadVimRc.reload<cr>
+" 大小写切换
+:nnoremap   ul              wbguw
+:nnoremap   up              wbgUw
+" 窗口设置
+:nnoremap   <c-l>           <c-w>l
+:nnoremap   <c-h>           <c-w>h
+:nnoremap   <c-k>           <c-w>k
+:nnoremap   <c-j>           <c-w>j
+" 标签设置
+:nnoremap   <c-1>           :action GoToTab1<cr>
+:nnoremap   <c-2>           :action GoToTab2<cr>
+:nnoremap   <c-3>           :action GoToTab3<cr>
+:nnoremap   <c-4>           :action GoToTab4<cr>
+:nnoremap   <c-5>           :action GoToTab5<cr>
+:nnoremap   <c-6>           :action GoToTab6<cr>
+:nnoremap   <c-7>           :action GoToTab7<cr>
+:nnoremap   <c-8>           :action GoToTab8<cr>
+:nnoremap   <c-9>           :action GoToTab9<cr>
+" 代码查找
+:nnoremap   <c-p>           :action FindUsages<cr>
+:nnoremap   gd              <c-]>
+:nnoremap   gi              :action GotoImplementation<cr>
+" Git 管理
+:nnoremap   <Leader>gl      :action Git.Menu<cr>
+:nnoremap   <Leader>gb      :action Git.Branches<cr>
+:nnoremap   <Leader>gf      :action Git.Fetch<cr>
+" 文件相关功能
+:nnoremap   <Leader>ft      :action ChangeScheme<cr>
+:nnoremap   <Leader>ff      :action GotoFile<cr>
+:nnoremap   <Leader>fl      :action GotoAction<cr>
+:nnoremap   <Leader>fc      :action GotoClass<cr>
+:nnoremap   <Leader>fw      :action SearchEverywhere<cr>
+:nnoremap   <Leader>/g      :action FindInPath<cr>
+:nnoremap   <Leader>fn      :action Find<cr>
+:nnoremap   <Leader>fp      :action ShowFilePath<cr>
+:nnoremap   <Leader>fo      :action OpenFile<cr>
+:nnoremap   <Leader>fr      :action ManageRecentProjects<cr>
+:nnoremap   <Leader>fd      :action CompareDirs<cr>
+:nnoremap   <Leader>fm      :action QuickList.Deployment<cr>
